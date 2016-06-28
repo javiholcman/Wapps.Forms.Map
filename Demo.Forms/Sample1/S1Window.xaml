@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 WidthRequest="270" 
+			 HeightRequest="115"
+			 Orientation="Vertical"
+			 Padding="6, 6, 6, 6"
+			 Spacing="0"
+			 xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+			 x:Class="Demo.Forms.S1Window">
+
+	<Label x:Name="LblTitle" Text="Simple text" HeightRequest="20" TextColor="Black" />
+
+	<StackLayout Orientation="Horizontal" Padding="0, 6, 0, 0" Spacing="4">
+
+		<ffimageloading:CachedImage x:Name="IvImage"
+			HorizontalOptions="Start" 
+			VerticalOptions="Start"
+            WidthRequest="70" HeightRequest="70"
+            DownsampleToViewSize="true" />
+
+        <StackLayout HeightRequest="80" WidthRequest="150" Orientation="Vertical">
+        	<Label x:Name="LblDescription" Text="Simple text" TextColor="Black" FontSize="13" WidthRequest="180" HeightRequest="26" />
+        	<BoxView BackgroundColor="Yellow" HeightRequest="25" />
+        </StackLayout>
+
+	</StackLayout>
+
+</StackLayout>

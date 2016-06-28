@@ -1,0 +1,8 @@
+*.DS_Store
+.DS_Store
+xcuserdata*
+.userprefs
+/packages/
+!packages/repositories.config
+bin
+obj
