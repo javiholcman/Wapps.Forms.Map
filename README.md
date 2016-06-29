@@ -99,3 +99,17 @@ Map.AddPin (pin);
 
 ```
 
+### Warnings
+* The pinView and windowView used here are rendered as bitmap because of the map sdk. So if you want to refresh the view after shown, call the 
+```c#
+Map.RefreshWindowForPin (pin);
+```
+* The Image control of Xamarin.Forms are not being rendered when source is of Uri type (on Android). Therefore use ffimageloading to remote image loading.
+
+```xml
+	<ffimageloading:CachedImage x:Name="IvImage"
+		HorizontalOptions="Start" 
+		VerticalOptions="Start"
+		WidthRequest="70" HeightRequest="70"
+		DownsampleToViewSize="true" />
+```
