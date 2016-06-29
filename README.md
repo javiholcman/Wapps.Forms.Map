@@ -113,7 +113,7 @@ Map.RefreshWindowForPin (pin);
 	WidthRequest="70" HeightRequest="70"
 	DownsampleToViewSize="true" />
 ```
-As mentioned before, you when the ivImage has been loaded, call refresh to the map:
+As mentioned before, when the ivImage has been loaded call refresh to the map:
 ```c#
 this.IvImage.Success += delegate(object sender, FFImageLoading.Forms.CachedImageEvents.SuccessEventArgs e) {
 	this.ParentPage.Map.RefreshWindowForPin (this.Pin);
