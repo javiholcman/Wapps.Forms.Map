@@ -1,0 +1,43 @@
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+	<metadata minClientVersion="2.8.3">
+		<id>Wapps.Forms.Map</id>
+		<version>0.1.0</version>
+		<title>Map extension for Xamarin.Forms</title>
+		<authors>Javier Holcman</authors>
+		<owners>Javier Holcman</owners>
+		<iconUrl>http://xamarinos.com/img/favicon.ico</iconUrl>
+    <licenseUrl>httpshttps://github.com/javiholcman/Wapps.Forms.Map/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/javiholcman/Wapps.Forms.Map</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>
+      Map extension for Xamarin.Forms. Allows to create Map pin and window without native renderers.
+    </description>
+		<summary>Map extension for Xamarin.Forms.</summary>
+		<tags>xamarin, pcl, xam.pcl, plugin for xamarin.forms, android, xamarin.forms, ios, map, pin, no renderers</tags>
+		<dependencies>
+			<group targetFramework="net">
+				<dependency id="Xamarin.Forms" version="2.2.0.45" />
+				<dependency id="Xamarin.Forms.Maps" version="2.2.0.45" />	
+			</group>
+			<group targetFramework="MonoAndroid">
+				<dependency id="Xamarin.Forms" version="2.2.0.45" />
+				<dependency id="Xamarin.Forms.Maps" version="2.2.0.45" />				
+			</group>
+			<group targetFramework="Xamarin.iOS10">
+				<dependency id="Xamarin.Forms" version="2.2.0.45" />
+				<dependency id="Xamarin.Forms.Maps" version="2.2.0.45" />
+			</group>
+		</dependencies>
+	</metadata>
+	<files>
+		<!--Forms-->
+		<file src="binaries/Wapps.Forms.Map.dll" target="lib\portable-net45+MonoAndroid10+MonoTouch10+Xamarin.iOS10+UAP10\Wapps.Forms.Map.dll" />
+		
+		<!--Xamarin.Android-->
+		<file src="binaries/Wapps.Forms.Map.Droid.dll" target="lib\MonoAndroid10\binaries/Wapps.Forms.Map.Droid.dll" />
+
+		<!--Xamarin.iOS-->
+		<file src="binaries/Wapps.Forms.Map.iOS.dll" target="lib\Xamarin.iOS10\Wapps.Forms.Map.iOS" />
+    
+	</files>
+</package>

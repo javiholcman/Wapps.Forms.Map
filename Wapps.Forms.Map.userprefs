@@ -1,6 +1,15 @@
-﻿<Properties StartupItem="Demo.Droid/Demo.Droid.csproj">
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupItem="Demo.iOS/Demo.iOS.csproj">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Demo.Forms/Sample1/S1Page.xaml.cs">
+    <Files>
+      <File FileName="Demo.iOS/AppDelegate.cs" Line="28" Column="4" />
+      <File FileName="Demo.Droid/MainActivity.cs" Line="23" Column="4" />
+      <File FileName="Demo.Forms/Sample1/S1Page.xaml" Line="16" Column="1" />
+      <File FileName="Demo.Forms/Sample1/S1Page.xaml.cs" Line="79" Column="11" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.ItemProperties.Demo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.049CF760-C83D-4F16-AEC0-419811966B33" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Demo.Droid PreferredExecutionTarget="Android.192.168.56.101:5555" />
 </Properties>
