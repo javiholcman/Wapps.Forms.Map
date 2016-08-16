@@ -3,6 +3,8 @@
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 WidthRequest="37" 
 			 HeightRequest="48"
+			 AnchorX="0.5"
+			 AnchorY="1.0"
 			 x:Class="Demo.Forms.S1PinView">
 
 	<AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">

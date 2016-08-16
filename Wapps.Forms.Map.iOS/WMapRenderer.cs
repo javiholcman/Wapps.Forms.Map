@@ -82,7 +82,7 @@ namespace Wapps.Forms.iOS
 					var nativeView = Utils.ConvertFormsToNative (formsView, new CGRect (0, 0, formsView.WidthRequest, formsView.HeightRequest));
 					nativeView.BackgroundColor = UIColor.Clear;
 					image = Utils.ConvertViewToImage (nativeView);
-					annotationView.CenterOffset = new CGPoint((formsView.WidthRequest / 2) - formsView.AnchorX, (formsView.HeightRequest/2) - formsView.AnchorY);
+					annotationView.CenterOffset = new CGPoint(formsView.WidthRequest * (0.5 - formsView.AnchorX), formsView.HeightRequest * (0.5 - formsView.AnchorY));
 				}
 				annotationView.CanShowCallout = false;
 				annotationView.Image = image;
