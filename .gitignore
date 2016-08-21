@@ -2,7 +2,9 @@
 .DS_Store
 xcuserdata*
 .userprefs
+*.userprefs
 /packages/
+packages/
 !packages/repositories.config
 bin
 obj

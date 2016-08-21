@@ -48,7 +48,7 @@ namespace Wapps.Forms.iOS
 		{
 			MKAnnotationView annotationView = null;
 
-			if (annotation is MKUserLocation)
+			if (!(annotation is MKPointAnnotation))
 				return null;
 
 			var pin = GetPin (annotation as MKPointAnnotation);
@@ -74,6 +74,7 @@ namespace Wapps.Forms.iOS
 
 			annotationView = mapView.DequeueReusableAnnotation (pin.Id);
 			if (annotationView == null) {
+				annotationView = new WPinAnnotationView(annotation, pin.Id);
 
 				UIImage image = null;
 				if (MapControl.GetPinViewDelegate != null) {
@@ -81,9 +82,8 @@ namespace Wapps.Forms.iOS
 					var nativeView = Utils.ConvertFormsToNative (formsView, new CGRect (0, 0, formsView.WidthRequest, formsView.HeightRequest));
 					nativeView.BackgroundColor = UIColor.Clear;
 					image = Utils.ConvertViewToImage (nativeView);
+					annotationView.CenterOffset = new CGPoint(formsView.WidthRequest * (0.5 - formsView.AnchorX), formsView.HeightRequest * (0.5 - formsView.AnchorY));
 				}
-
-				annotationView = new WPinAnnotationView (annotation, pin.Id);
 				annotationView.CanShowCallout = false;
 				annotationView.Image = image;
 				((WPinAnnotationView)annotationView).Id = pin.Id;

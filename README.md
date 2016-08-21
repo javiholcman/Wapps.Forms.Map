@@ -55,7 +55,24 @@ protected override void OnCreate (Bundle bundle)
 </ContentPage>
 ```
 
-4) On the .cs of the page, when the map is created, setup the delegates to return the related views for the pin and the window.
+4) Create a class for your Pin view either using Xaml or code:
+```c#
+<StackLayout xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 WidthRequest="37" 
+			 HeightRequest="48"
+			 AnchorX="0.5"
+			 AnchorY="1.0"
+			 x:Class="Demo.Forms.S1PinView">
+	<AbsoluteLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+		<Image Source="pin_red.png" 
+			AbsoluteLayout.LayoutBounds="0, 0, 37, 48"
+			AbsoluteLayout.LayoutFlags="None" />
+	</AbsoluteLayout>
+</StackLayout>
+```
+
+5) On the .cs of the page, when the map is created, setup the delegates to return the related views for the pin and the window.
 
 ```c#
 public S1Page ()
@@ -64,7 +81,7 @@ public S1Page ()
 
 	// set the delegate to return the pinView
 	this.Map.GetPinViewDelegate = delegate (WPin pin) {
-		var pinView = new PinView(); // can be a user control or whatever
+		var pinView = new S1PinView(); // can be a user control or whatever
 		return pinView;
 	};
 

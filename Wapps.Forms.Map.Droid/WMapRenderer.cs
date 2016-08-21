@@ -57,6 +57,7 @@ namespace Wapps.Forms.Droid
 
 					if (MapControl.GetPinViewDelegate != null) {
 						var formsView = MapControl.GetPinViewDelegate (pin);
+						marker = marker.Anchor((float) formsView.AnchorX, (float) formsView.AnchorY);
 						//var nativeView = Utils.ConvertFormsToNative (formsView, new Rectangle (0, 0, (double)Utils.DpToPx ((float)formsView.WidthRequest), (double)Utils.DpToPx ((float)formsView.HeightRequest)));
 						var nativeView = WMapAuxiliarRenderer.LiveMapRenderer.GetNativeView(formsView);
 						Utils.FixImageSourceOfImageViews (nativeView as Android.Views.ViewGroup);
