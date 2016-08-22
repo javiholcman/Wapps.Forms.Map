@@ -9,7 +9,7 @@ Control for Xamarin.Forms to show a Map with custom views on pins and windows wi
 ```c#
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
-	// Add this Add this line to use WMap
+	// Add this line to use WMap
 	// Is necesary to force load the assembly
 	Console.WriteLine (typeof(Wapps.Forms.iOS.WMapRenderer).Name);
 
