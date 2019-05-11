@@ -1,3 +1,5 @@
+THIS CONTROL IS DEPRECTATED.
+
 # Wapps.Forms.Map
 Control for Xamarin.Forms to show a Map with custom views on pins and windows without custom renders. For iOS &amp; Android.
 
